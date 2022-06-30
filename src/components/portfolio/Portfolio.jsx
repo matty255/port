@@ -56,12 +56,15 @@ export default function Portfolio() {
     <>
 { modalOn && (
   <>
+
       <Modal
           data={modalData}
           modalOn={modalOn}
           setModalOn={setModalOn}
       />
+      
       <button onClick={() => setModalOn(!modalOn)} className=" fixed z-9 top-52 w-40"></button>
+     
       </>
   )}
   
@@ -78,7 +81,7 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <div className="flex md:justify-center">
+      <div className="flex md:justify-center ">
       <div className="container justify-center md:justify-start">
         {data.map((d, i) => (
          
