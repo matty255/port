@@ -29,10 +29,8 @@
   }
 
   .container {
-    width: 70%;
+    width: 80%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
 
     @include mobile{
@@ -40,11 +38,11 @@
     }
 
     .item {
-      width: 220px;
-      height: 150px;
-      border-radius: 20px;
+      width: 13.75rem;
+      height: 9.375rem;
+      border-radius: 0.5rem;
       border: 1px solid rgb(240, 239, 239);
-      margin: 10px 20px;
+      margin: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;

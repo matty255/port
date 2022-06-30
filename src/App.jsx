@@ -8,6 +8,10 @@ import "./app.scss"
 import { useState } from "react";
 import Menu from "./components/menu/Menu";
 
+document.cookie = "safeCookie1=foo; SameSite=Lax"; 
+document.cookie = "safeCookie2=foo"; 
+document.cookie = "crossCookie=bar; SameSite=None; Secure";
+
 function App() {
   const [menuOpen,setMenuOpen] = useState(false)
   return (

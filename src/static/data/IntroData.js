@@ -2,6 +2,7 @@ export const textLines = [
   `<b>프론트엔드</b> 개발자`,
   `<b>협업을 잘하는</b> 개발자`,
   `<b>항상 도전하는</b> 개발자`,
+  `<b>고양이를 좋아하는</b> 개발자`,
 ];
 
 export const intros = {
