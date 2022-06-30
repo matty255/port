@@ -27,3 +27,19 @@
     - action이 실패하면 rerun하기
     
 완성되면 우측 하단에 깃페이지 Environments가 활성화되고 포트폴리오를 볼 수 있다!
+
+----
+
+## 사용 라이브러리
+- node-sass
+- tailwindCSS
+- typed.js
+- tw-elements
+
+## 주요 기능(구현중)
+- 바닐라 css로 전면 버티컬 슬라이드 구현
+- 바닐라 css로 background modal 구현
+- 다양한 포맷의 autoplay video 캐러셀
+- 데이터파일 분리로 커스터마이징을 쉽게
+- theme, dark, language 정보를 context로 전역관리
+- 내 계정으로 email 받기
