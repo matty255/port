@@ -15,7 +15,14 @@
 
 0. 제작자에게 스타를 준다.
 1. 클론하거나 포크한다.
-2. static/data 안의 json파일을 각자의 정보에 맞게 수정한다.
-3. package.json 안의 homepage를 레포지토리 주소로 바꿔준다.
-4. 커밋을 올린다.
-5. 깃페이지 주소를 복사한다.
+2. npm run i
+3. static/data 안의 json파일을 각자의 정보에 맞게 수정한다.
+5. 커밋을 올린다.
+6. settings에 들어가 page > main에 놓고 save
+7. save하면 나오는 깃페이지 주소를 복사한다.
+8. package.json 안의 homepage를 이 주소로 바꿔준다.
+9. npm run deploy
+10. 다시 settings에 들어가 page > gh-page로 브랜치를 변경해준다.
+    - action이 실패하면 rerun하기
+    
+완성되면 우측 하단에 깃페이지 Environments가 활성화되고 포트폴리오를 볼 수 있다!
