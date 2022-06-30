@@ -1,3 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* 로컬폰트 추가 */
+@font-face {
+  font-family: "MinSans-Bold";
+  src: url("./static/fonts/ttf/MinSans-Black.ttf")
+  format('truetype');
+}
+
+@font-face {
+  font-family: "MinSans-Medium";
+  src: url("./static/fonts/ttf/MinSans-Medium.ttf")
+  format('truetype');
+}
+
+@font-face {
+  font-family: "MinSans-Regular";
+  src: url("./static/fonts/ttf/MinSans-Regular.ttf")
+  format('truetype');
+}
+
+@font-face {
+  font-family: "MinSans-Light";
+  src: url("./static/fonts/ttf/MinSans-Light.ttf")
+  format('truetype');
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
