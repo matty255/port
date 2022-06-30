@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./contact.scss";
 import {contacts} from "../../static/data/contactInfo" 
+import Computer from "../../static/image/computer.gif"
 
 export default function Contact() {
 
@@ -9,9 +10,8 @@ export default function Contact() {
     <div className="contact" id="contact">
       <div className="left">
         <div className="rounded-full absolute bg-white w-44 h-44 md:w-72 md:h-72 left-44 mt-32">
-        
         </div>
-        <img src="assets/computer.gif" alt="" className="sepia object-contain" />
+        <img src={Computer} alt="" className="sepia object-contain" />
       </div>
       <div className="right">
         <h2 className="mb-12 font-min1">Contact to. <span className="font-minB tracking-tight">{contacts.name}</span></h2>
