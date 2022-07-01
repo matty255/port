@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {data} from "../../static/data/videoLinkData";
 export default function Works() {
 
@@ -6,6 +6,19 @@ const convertUrl = (id) => {
   const youtubeUrl = `https://www.youtube.com/embed/${id}?rel=0&amp;autoplay=1&mute=1&amp;loop=1;playlist=${id}`
   return youtubeUrl
 }
+const [frameHeight , setFrameHeight] = useState()
+
+useEffect(() => {
+
+ const frame = document.getElementById('myFrame');
+ console.log("height" , frame.contentWindow.document.body.scrollHeight + "px")
+        
+ setTimeout(() => {
+   setFrameHeight(frame.contentWindow.document.body.scrollHeight + "px")
+  },100)
+
+
+ },[])
   
   return (
     <> 
@@ -50,10 +63,10 @@ const convertUrl = (id) => {
   </div>
 
   <div className="carousel-inner relative w-full overflow-hidden h-full">
-    <div className="carousel-item active relative float-left w-full bg-no-repeat bg-cover bg-center">
+    <div className="carousel-item active relative float-left w-full bg-no-repeat bg-cover bg-center" >
 
      {data[0].isYoutube === true ? 
-     <iframe className="min-w-full min-h-full max-w-fit" height={768} src={convertUrl(data[0].id)} frameBorder="0" title="a"></iframe> : 
+     <iframe id="myFrame" className="min-w-full min-h-full max-w-fit h-screen" height={frameHeight} src={convertUrl(data[0].id)} frameBorder="0" title="a"></iframe> : 
      <video className="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsInline autoPlay={true} controls = '' muted loop>
         <source className="" src={data[0].url} type="video/mp4" />
       </video>
@@ -74,7 +87,7 @@ const convertUrl = (id) => {
     <div className="carousel-item relative float-left w-full bg-no-repeat bg-cover bg-center">
 
     {data[1].isYoutube === true ? 
-     <iframe className="min-w-full min-h-full max-w-fit" height={768} src={convertUrl(data[1].id)} frameBorder="0" title="a"></iframe> : 
+     <iframe id="myFrame" className="min-w-full min-h-full max-w-fit h-screen" height={frameHeight} src={convertUrl(data[1].id)} frameBorder="0" title="a"></iframe> : 
      <video className="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsInline autoPlay={true} controls = '' muted loop>
         <source className="" src={data[1].url} type="video/mp4" />
       </video>
@@ -94,7 +107,7 @@ const convertUrl = (id) => {
 
     <div className="carousel-item relative float-left w-full bg-no-repeat bg-cover bg-center">
     {data[2].isYoutube === true ? 
-     <iframe className="min-w-full min-h-full max-w-fit" height={768} src={convertUrl(data[2].id)} frameBorder="0" title="a"></iframe> : 
+     <iframe id="myFrame" className="min-w-full min-h-full max-w-fit h-screen" height={frameHeight} src={convertUrl(data[2].id)} frameBorder="0" title="a"></iframe> : 
      <video className="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsInline autoPlay={true} controls = '' muted loop>
         <source className="" src={data[2].url} type="video/mp4" />
       </video>
@@ -112,7 +125,7 @@ const convertUrl = (id) => {
     </div>
     <div className="carousel-item relative float-left w-full  bg-no-repeat bg-cover bg-center">
     {data[3].isYoutube === true ? 
-     <iframe className="min-w-full min-h-full max-w-fit" height={768} src={convertUrl(data[3].id)} frameBorder="0" title="a"></iframe> : 
+     <iframe id="myFrame" className="min-w-full min-h-full max-w-fit h-screen" height={frameHeight} src={convertUrl(data[3].id)} frameBorder="0" title="a"></iframe> : 
      <video className="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsInline autoPlay={true} controls = '' muted loop>
         <source className="" src={data[3].url} type="video/mp4" />
       </video>
@@ -133,7 +146,7 @@ const convertUrl = (id) => {
     <div className="carousel-item relative float-left w-full bg-no-repeat bg-cover bg-center">
 
     {data[4].isYoutube === true ? 
-     <iframe className="min-w-full min-h-full max-w-fit" height={768} src={convertUrl(data[4].id)} frameBorder="0" title="a"></iframe> : 
+     <iframe id="myFrame" className="min-w-full min-h-full max-w-fit h-screen" height={frameHeight} src={convertUrl(data[4].id)} frameBorder="0" title="a"></iframe> : 
      <video className="min-w-full min-h-full max-w-fit xl:min-w-0 xl:min-h-0" playsInline autoPlay={true} controls = '' muted loop>
         <source className="" src={data[4].url} type="video/mp4" />
       </video>

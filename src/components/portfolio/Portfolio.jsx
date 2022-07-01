@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
+import "./modal.css"
 import {
   list,
   webPortfolio,
@@ -16,23 +17,36 @@ export default function Portfolio() {
   const [modalOn, setModalOn] = useState(false);
   const [modalData, setModalData] = useState({});
   const [data, setData] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   useEffect(() => {
     switch (selected) {
       case list[0].id:
         setData(webPortfolio);
+        setModalData(webAppPortfolio[0])
         break;
       case list[1].id:
         setData(webAppPortfolio);
+        setModalData(webAppPortfolio[1])
         break;
       case list[2].id:
         setData(mobilePortfolio);
+        setModalData(webAppPortfolio[2])
         break;
       case list[3].id:
         setData(openSourcePortfolio);
+        setModalData(webAppPortfolio[3])
         break;
       case list[4].id:
         setData(etcPortfolio);
+        setModalData(webAppPortfolio[4])
         break;
       default:
         setData(webPortfolio);
@@ -42,9 +56,9 @@ export default function Portfolio() {
   const handleModal = (d) => {
     let id = d.id;
     if(modalData && modalData.id === parseInt(id)) {
-      setModalOn((state) => !state);
-    } else if (!modalOn) {
-      setModalOn((state) => !state);
+      setModalOpen((state) => !state);
+    } else if (!modalOpen) {
+      setModalOpen((state) => !state);
       setModalData(d)
     } else {
       setModalData(d)
@@ -54,23 +68,12 @@ export default function Portfolio() {
 
   return (
     <>
-{ modalOn && (
-  <>
 
-      <Modal
-          data={modalData}
-          modalOn={modalOn}
-          setModalOn={setModalOn}
-      />
-      
-      <button onClick={() => setModalOn(!modalOn)} className=" fixed z-9 top-52 w-40"></button>
-     
-      </>
-  )}
-  
     <div className="portfolio" id="portfolio" >
       <h1 className="font-minB">Projects</h1>
-      <ul>
+      <Modal open={modalOpen} close={closeModal} data={modalData} />
+
+      <ul className={modalOpen ? "fixed top-0 z-30 opacity-80 hover:opacity-100 transition transform ease-in-out translate-y-3 overflow-hidden" : ""}>
         {list.map((item, i) => (
           <PortfolioList
           key={`${i}-item.id`}
@@ -78,6 +81,7 @@ export default function Portfolio() {
             active={selected === item.id}
             setSelected={setSelected}
             id={item.id}
+            modalOpen={modalOpen}
           />
         ))}
       </ul>
@@ -85,7 +89,7 @@ export default function Portfolio() {
       <div className="container justify-center md:justify-start">
         {data.map((d, i) => (
          
-          <div className="item z-30" key={`${i}-${d.id}`} onClick={() => handleModal(d)}>
+          <div className={modalOpen ? "item z-30 opacity-10 hover:opacity-100" : "item"} key={`${i}-${d.id}`} onClick={() => handleModal(d)}>
             <img
               src={d.img}
               alt=""

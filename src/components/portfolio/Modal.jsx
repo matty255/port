@@ -1,32 +1,42 @@
+import React, { useState, useEffect } from "react";
+import ModalContent from "./ModalContent";
+const Modal = (props) => {
 
+  const { open, close, data } = props;
 
-export default function Modal(data) {
-  const image = data.data.img
+  const [animate, setAnimate] = useState(false);
+
+  const [visible, setVisible] = useState(open);
+
+  useEffect(() => {
+    if (visible && !open) {
+      setAnimate(true);
+      setTimeout(() => setAnimate(false), 250);
+    }
+    setAnimate(open);
+  }, [visible, open]);
+
+  if (!animate && !visible) return null;
+
   return (
-    <div>
 
-<div className="fixed top-0 left-0 w-full h-2/3">
-</div>
-<div className="w-full h-2/3 fixed top-0 z-10 bg-no-repeat bg-cover
-flex justify-center scale-110 ease-in transition duration-150 
-" style={{backgroundImage: `linear-gradient(to bottom, transparent, #F8F0DF), url(${image})`}}>
+    <div className={open ? "modal open" : "modal close"}>
+      <section>
+       
 
-   {/* <img src={data.data.img} alt="" className="opacity-60 object-fill m-auto hover:z-50 z-9 peer group-hover:opacity-100  top-24"  /> */}
+        <main>
+          <ModalContent data={data} open={open} />
+        </main>
 
-</div>
-<div>
-<div className="fixed bottom-20 h-40 w-full bg-white z-50 opacity-80">
-  여기테이블
-  <div className="flex flex-col">
-  <p>{data.data.title}</p>
-  <p> {data.data.desc}</p>
-  </div>
-  </div>
-  <p className="fixed bottom-10 left-8 md:left-1/3">돌아가기</p>
-<p className="fixed bottom-10 right-8 md:right-1/3">보러가기</p>
-
-
-</div>
+        {/* <button className="close">
+          &times;
+        </button> */}
+       
+      </section>
+      <button className="fixed bottom-10 left-8 md:left-1/3 bg-amber-300 text-white p-1 rounded-md font-min1 tracking-wider" onClick={close} >돌아가기</button>
+          <button className="fixed bottom-10 right-8 md:right-1/3 bg-amber-300 text-white p-1 rounded-md font-min1 tracking-wider border-solid" >보러가기</button>
     </div>
   );
-}
+};
+
+export default Modal;
