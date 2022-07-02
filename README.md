@@ -18,6 +18,7 @@
 1. 클론하거나 포크한다.
 2. npm run i
 3. static/data 안의 json파일을 각자의 정보에 맞게 수정한다.
+4. npm start
 5. 커밋을 올린다.
 6. settings에 들어가 page > main에 놓고 save
 7. save하면 나오는 깃페이지 주소를 복사한다.
