@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/port/static/css/main.cd81690c.css",
-    "main.js": "/port/static/js/main.f01682d4.js",
+    "main.css": "/port/static/css/main.57fc9ee1.css",
+    "main.js": "/port/static/js/main.89dd44c3.js",
     "static/js/787.b2e1b36e.chunk.js": "/port/static/js/787.b2e1b36e.chunk.js",
     "static/media/MinSans-Light.ttf": "/port/static/media/MinSans-Light.017ae3d89d660e270ac3.ttf",
     "static/media/MinSans-Regular.ttf": "/port/static/media/MinSans-Regular.f67b9b81d238ffe15f43.ttf",
@@ -9,12 +9,12 @@
     "static/media/MinSans-Black.ttf": "/port/static/media/MinSans-Black.27200f519ac694b3ebc6.ttf",
     "static/media/computer.gif": "/port/static/media/computer.492398f9ba2fbe2fcc50.gif",
     "index.html": "/port/index.html",
-    "main.cd81690c.css.map": "/port/static/css/main.cd81690c.css.map",
-    "main.f01682d4.js.map": "/port/static/js/main.f01682d4.js.map",
+    "main.57fc9ee1.css.map": "/port/static/css/main.57fc9ee1.css.map",
+    "main.89dd44c3.js.map": "/port/static/js/main.89dd44c3.js.map",
     "787.b2e1b36e.chunk.js.map": "/port/static/js/787.b2e1b36e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd81690c.css",
-    "static/js/main.f01682d4.js"
+    "static/css/main.57fc9ee1.css",
+    "static/js/main.89dd44c3.js"
   ]
 }
