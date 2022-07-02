@@ -11,10 +11,10 @@ const [frameHeight , setFrameHeight] = useState()
 useEffect(() => {
 
  const frame = document.getElementById('myFrame');
- console.log("height" , frame.contentWindow.document.body.scrollHeight + "px")
+//  console.log("height" , frame.contentWindow.document.body.scrollHeight + "px")
         
  setTimeout(() => {
-   setFrameHeight(frame.contentWindow.document.body.scrollHeight + "px")
+   setFrameHeight((frame.contentWindow.document.body.scrollHeight - 40) + "px")
   },100)
 
 

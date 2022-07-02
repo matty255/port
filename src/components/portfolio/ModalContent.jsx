@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import  "./modal.css"
+import  "./modal.scss"
 
 export default function Modal(data, open) {
   const image = data.data.img

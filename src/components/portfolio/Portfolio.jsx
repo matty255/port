@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
-import "./modal.css"
+import "./modal.scss"
 import {
   list,
   webPortfolio,
@@ -73,7 +73,7 @@ export default function Portfolio() {
       <h1 className="font-minB">Projects</h1>
       <Modal open={modalOpen} close={closeModal} data={modalData} />
 
-      <ul className={modalOpen ? "fixed top-0 z-30 opacity-80 hover:opacity-100 transition transform ease-in-out translate-y-3 overflow-hidden" : ""}>
+      <ul className={modalOpen ? "fixed top-0 z-30 opacity-80 hover:opacity-100 transition transform ease-in-out translate-y-3 overflow-hidden flex shrink-0" : ""}>
         {list.map((item, i) => (
           <PortfolioList
           key={`${i}-item.id`}

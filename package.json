@@ -15,6 +15,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-stacked-center-carousel": "^1.0.11",
     "react-typed": "^1.2.0",
     "tailwind-styled-components": "^2.1.8",
     "tw-elements": "^1.0.0-alpha12",
@@ -48,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/react": "^3.2.2",
     "autoprefixer": "^10.4.7",
     "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",

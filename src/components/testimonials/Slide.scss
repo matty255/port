@@ -1,0 +1,85 @@
+@import "../../global.scss";
+
+.card-card {
+  transition: all 300ms ease;
+  cursor: pointer;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  background-color: #ffffff;
+
+  border-radius: 0.5rem;
+
+}
+
+.react-stacked-center-carousel-slide-0 .card-card {
+  cursor: default;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.card-card {
+  .card-overlay {
+    user-select: none;
+    position: absolute;
+    background-color: #00000099;
+    transition: all 300ms ease;
+  }
+
+  &:hover .card-overlay {
+    background-color: #0000002d;
+  }
+}
+
+.react-stacked-center-carousel-slide-0 .card-overlay {
+  background-color: #00000099 !important;
+}
+
+.card-card {
+  .cover-image {
+    object-fit: cover;
+  }
+
+  .cover {
+    position: absolute;
+    transition: opacity 300ms ease;
+  }
+}
+
+.react-stacked-center-carousel-slide-0 .card-card .cover {
+  transition: opacity 300ms ease, z-index 0ms 300ms;
+}
+
+.card-card {
+  .cover {
+    &.on {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    &.off {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  .detail {
+    display: flex;
+  }
+
+  .video {
+    width: 20%;
+  }
+
+  .discription {
+    display: flex;
+    flex-direction: column;
+  }
+}
