@@ -14,14 +14,13 @@ import Modal from "./Modal"
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
-  const [modalOn, setModalOn] = useState(false);
   const [modalData, setModalData] = useState({});
   const [data, setData] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const openModal = () => {
-    setModalOpen(true);
-  };
+  // const openModal = () => {
+  //   setModalOpen(true);
+  // };
   const closeModal = () => {
     setModalOpen(false);
   };
@@ -30,7 +29,7 @@ export default function Portfolio() {
     switch (selected) {
       case list[0].id:
         setData(webPortfolio);
-        setModalData(webAppPortfolio[0])
+        setModalData(webPortfolio[0])
         break;
       case list[1].id:
         setData(webAppPortfolio);
@@ -38,15 +37,15 @@ export default function Portfolio() {
         break;
       case list[2].id:
         setData(mobilePortfolio);
-        setModalData(webAppPortfolio[2])
+        setModalData(mobilePortfolio[2])
         break;
       case list[3].id:
         setData(openSourcePortfolio);
-        setModalData(webAppPortfolio[3])
+        setModalData(openSourcePortfolio[3])
         break;
       case list[4].id:
         setData(etcPortfolio);
-        setModalData(webAppPortfolio[4])
+        setModalData(etcPortfolio[4])
         break;
       default:
         setData(webPortfolio);

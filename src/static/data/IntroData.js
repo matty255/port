@@ -17,7 +17,7 @@ export const intros = {
 export const menuNames = {
   Home: "Home",
   Portfolio: "Projects",
-  Works: "",
+  Works: "Videos",
   Testimonials: "Experience",
   Contact: "Contact",
 };

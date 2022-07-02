@@ -23,7 +23,7 @@ function App() {
      <div className="sections font-sanss">
        <Intro/>
        <Portfolio/>
-       {/* <Works/> */}
+       <Works/>
        <Testimonials />
        <Contact/>
      </div>

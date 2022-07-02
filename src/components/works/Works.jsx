@@ -7,18 +7,17 @@ const convertUrl = (id) => {
   return youtubeUrl
 }
 const [frameHeight , setFrameHeight] = useState()
+const handleResize = () => {
+  setFrameHeight(window.innerHeight)
+}
 
-useEffect(() => {
-
- const frame = document.getElementById('myFrame');
-//  console.log("height" , frame.contentWindow.document.body.scrollHeight + "px")
-        
- setTimeout(() => {
-   setFrameHeight((frame.contentWindow.document.body.scrollHeight - 40) + "px")
-  },100)
-
-
- },[])
+  useEffect(() => {
+      window.addEventListener('resize', handleResize)
+      // console.log(frameHeight)
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
+  }, [])
   
   return (
     <> 

@@ -20,6 +20,7 @@ export default function Contact() {
         <p><span className="font-min1 text-lg text-right">blog. </span>{contacts.blog}</p>
         <p><span className="font-min1 text-lg text-right">mail. </span>{contacts.mail}</p>
         <p><span className="font-min1 text-lg text-right">github. </span>{contacts.github}</p>
+        <button className="self-end bg-yellow-300 w-fit rounded-md mt-10 px-1">sand mail</button>
         </div>
       </div>
     </div>
